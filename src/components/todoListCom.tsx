@@ -16,6 +16,8 @@ const TodoList: React.FC<props> = ({
   CompletedTodos,
   setCompletedTodos,
 }) => {
+  console.log( CompletedTodos,
+  setCompletedTodos)
   return (
     <div className="container">
       <div className="todos">
