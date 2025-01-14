@@ -7,6 +7,7 @@ import TodoList  from "./components/todoListCom"
 function App() {
   const [todo, setTodo] = useState<string>("")
   const [todoList, setTodoList] = useState<Todo[]>([])
+  const [CompletedTodos, setCompletedTodos] = useState<Array<Todo>>([]);
 
   const handleAdd = (e: React.FormEvent) => {
     e.preventDefault()
@@ -21,7 +22,7 @@ function App() {
     <div className='App'>
       <span>Taskify</span>
       <InputFields todo={todo} setTodo={setTodo} handleAdd={handleAdd} />
-      <TodoList todos={todoList} setTodos={setTodoList} />
+      <TodoList todos={todoList} setTodos={setTodoList}  CompletedTodos={CompletedTodos} setCompletedTodos={setCompletedTodos}/>
     </div>
   )
 }
