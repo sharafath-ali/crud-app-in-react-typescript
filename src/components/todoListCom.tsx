@@ -16,13 +16,14 @@ const TodoList: React.FC<props> = ({
   CompletedTodos,
   setCompletedTodos,
 }) => {
+  console.log( CompletedTodos,
+  setCompletedTodos)
   return (
     <div className="container">
       <div className="todos">
         <span className="todos__heading">Active Tasks</span>
         {todos.map((todo) => (
           <SingleTodo
-            index={todo.id}
             todo={todo}
             key={todo.id}
             todos={todos}

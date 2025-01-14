@@ -5,11 +5,10 @@ import { MdDone } from "react-icons/md";
 import { Todo } from "../model";
 
 const SingleTodo: React.FC<{
-  index: number;
   todo: Todo;
   todos: Array<Todo>;
   setTodos: React.Dispatch<React.SetStateAction<Array<Todo>>>;
-}> = ({ index, todo, todos, setTodos }) => {
+}> = ({ todo, todos, setTodos }) => {
   const [edit, setEdit] = useState<boolean>(false);
   const [editTodo, setEditTodo] = useState<string>(todo.todo);
 
